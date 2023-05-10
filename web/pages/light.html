@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Smart Lighting Devices</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Body styles */
+    body {
+      background-color: #f2f2f2;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+    }
+
+    /* Form styles */
+    form {
+      margin: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .color-label {
+      margin-top: 20px;
+    }
+
+    button.submit-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    button.submit-button:hover {
+      background-color: #555;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    th {
+      background-color: #333;
+      color: #fff;
+      border: 1px solid black;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #7f7f7f;
+    }
+
+    .main-title{
+            text-decoration: none;
+            color: white;
+        }
+  </style>
+  <header>
+    <h1><a class="main-title" href="/">IoT Building</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/show-devices">Show Devices</a></li>
+        <li><a href="/add-device">Add Device</a></li>
+        <li><a href="/delete-device">Delete Device</a></li>
+        <li><a href="/air-conditioning">Air Conditioning</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/high-chart">Sensor Data</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Light</th>
+        <th>Brightness</th>
+        <th>Color</th>
+      </tr>
+    </thead>
+    <tbody id="lightBody">
+    </tbody>
+  </table>
+  <h2>Light Controls</h2>
+  <form>
+    <h3>Light 1</h3>
+    <label for="light1-dropdown">Intensity Value: </label>
+    <select id="light1-dropdown">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <label for="light1-color" class="color-label">Select a color: </label>
+    <input type="color" value="#ffffff" id="light1-color">
+    <button class="submit-button" id="submit-light1">Submit</button>
+
+    <h3>Light 2</h3>
+    <label for="light2-dropdown">Intensity Value: </label>
+    <select id="light2-dropdown">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <label for="light2-color">Select a color: </label>
+    <input type="color" value="#ffffff" id="light2-color">
+    <button class="submit-button" id="submit-light2">Submit</button>
+
+    <h3>Light 3</h3>
+    <label for="light3-dropdown">Intensity Value: </label>
+    <select id="light3-dropdown">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <label for="light3-color">Select a color: </label>
+    <input type="color" value="#ffffff" id="light3-color">
+    <button class="submit-button" id="submit-light3">Submit</button>
+  </form>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

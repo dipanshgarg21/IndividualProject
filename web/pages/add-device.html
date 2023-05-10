@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Device</title>
+
+    <style>
+        /* Body styles */
+
+        *{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* Form styles */
+
+        .add-title{
+          margin: 8px;
+        }
+
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .main-title{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a class="main-title" href="/">IoT Building</a></h1>
+        <nav>
+            <ul>
+              <li><a href="/show-devices">Show Devices</a></li>
+                <li><a href="/light">Light</a></li>
+                <li><a href="/air-conditioning">Air Conditioning</a></li>
+                <li><a href="/security">Security</a></li>
+                <li><a href="/delete-device">Delete Devices</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="add-title">Add a Device</h1>
+    <form id="deviceForm">
+        <label for="deviceName">Device Name:</label>
+        <input type="text" id="deviceName" required>
+        <br><br>
+        <label for="userName">User Name:</label>
+        <input type="text" id="userName" required>
+        <br><br>
+        <label for="room">Room:</label>
+        <select id="room">
+            <option value="livingRoom">Living Room</option>
+            <option value="bedroom">Bedroom</option>
+            <option value="kitchen">Kitchen</option>
+        </select>
+        <br><br>
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="light">Light</option>
+            <option value="airConditioning">Air Conditioning</option>
+            <option value="security">Security</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" id="newDevice">
+    </form>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

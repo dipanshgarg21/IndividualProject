@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Security Devices</title>
+</head>
+
+<body>
+  <style>
+        *{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Body styles */
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* Form styles */
+        form{
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button.submit-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        button.submit-button:hover {
+            background-color: #555;
+        }
+
+        .main-title{
+            text-decoration: none;
+            color: white;
+        }
+  </style>
+    <header>
+        <h1><a class="main-title" href="/">IoT Building</a></h1>
+        <nav>
+          <ul>
+            <li><a href="/add-device">Add Device</a></li>
+            <li><a href="/show-devices">Show Devices</a></li>
+            <li><a href="/delete-device">Delete Device</a></li>
+            <li><a href="/light">Light</a></li>
+            <li><a href="/air-conditioning">Air Conditioning</a></li>
+            <li><a href="/high-chart">Sensor Data</a></li>
+          </ul>
+      </nav>
+      </header>
+          <h2 class="title">Security Controls</h2>
+          <form>
+              <h3>Door 1</h3>
+              <select id="door1">
+                <option value="locked">Locked</option>
+                <option value="unlocked">Unlocked</option>
+              </select>
+              <span id="door1state"></span>
+    
+              <h3>Door 2</h3>
+              <select id="door2">
+                <option value="locked">Locked</option>
+                <option value="unlocked">Unlocked</option>
+              </select>
+              <span id="door2state"></span>
+
+              <h3>Window 1</h3>
+              <select id="window1">
+                <option value="closed">Closed</option>
+                <option value="open">Open</option>
+              </select>
+              <span id="window1state"></span>
+            </form>
+            <button class="submit-button" id="subsec">Submit</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

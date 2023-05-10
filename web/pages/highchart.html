@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Body styles */
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        .container{
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+
+        .main-title{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+    <header>
+        <h1><a class="main-title" href="/">IoT Building</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/add-device">Add Device</a></li>
+                <li><a href="highchart.html">Show Devices</a></li>
+                <li><a href="/delete-device">Delete Device</a></li>
+                <li><a href="/light">Light</a></li>
+                <li><a href="/air-conditioning">Air Conditioning</a></li>
+                <li><a href="/security">Security</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="my-plot">
+        </div>
+        <div id="plot">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
