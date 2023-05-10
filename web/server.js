@@ -1,22 +1,6 @@
 const express = require('express');
 const app = express();
 
-const helmet = require("helmet");
-app.use(helmet.contentSecurityPolicy());
-app.use(helmet.dnsPrefetchControl());
-app.use(helmet.expectCt());
-app.use(helmet.frameguard());
-app.use(helmet.hidePoweredBy());
-app.use(helmet.hsts());
-app.use(helmet.ieNoOpen());
-app.use(helmet.noSniff());
-app.use(helmet.permittedCrossDomainPolicies());
-app.use(helmet.referrerPolicy());
-app.use(helmet.xssFilter());
-
-app.use(helmet());
-
-
 const port = 3000;
 const base = `${__dirname}/pages`;
 
