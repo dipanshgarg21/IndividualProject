@@ -1,5 +1,5 @@
-const API_URL = 'http://localhost:5000/api';
-const MQTT_URL = 'http://localhost:5005/mqttvalues';
+const API_URL = 'https://api-individual.onrender.com/api';
+const MQTT_URL = 'https://mqtt-individual.onrender.com/mqttvalues';
 
 $(`#newDevice`).on('click', (event) => {
   event.preventDefault();
