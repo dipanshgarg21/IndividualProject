@@ -109,7 +109,8 @@ $.get(`${API_URL}/securityDevices`)
     });
   })
 
-$('#submit-light1').on('click', function () {
+$('#submit-light1').on('click', function (event) {
+  event.preventDefault();
   const light = 1;
   const brightness = $('#light1-dropdown').val();
   const color = $('#light1-color').val();
@@ -122,15 +123,17 @@ $('#submit-light1').on('click', function () {
 
   $.post(`${API_URL}/lightDevices`, body)
     .then(response => {
-      console.log(done);
+      console.log("done");
+      alert("Status updated!!");
+      location.reload();
     })
     .catch(error => {
       console.log(error);
     });
-  location.reload();
 });
 
-$('#submit-light2').on('click', function () {
+$('#submit-light2').on('click', function (event) {
+  event.preventDefault();
   const light = 2;
   const brightness = $('#light2-dropdown').val();
   const color = $('#light2-color').val();
@@ -143,14 +146,16 @@ $('#submit-light2').on('click', function () {
 
   $.post(`${API_URL}/lightDevices`, body)
     .then(response => {
-      console.log(done);
+      console.log("done");
+      alert("Status updated!!");
+      location.reload();
     })
     .catch(error => {
       console.log(error);
     });
-  location.reload();
-});
-$('#submit-light3').on('click', function () {
+  });
+  $('#submit-light3').on('click', function (event) {
+  event.preventDefault();
   const light = 3;
   const brightness = $('#light3-dropdown').val();
   const color = $('#light3-color').val();
@@ -163,18 +168,19 @@ $('#submit-light3').on('click', function () {
 
   $.post(`${API_URL}/lightDevices`, body)
     .then(response => {
-      console.log(done);
+      console.log("done");
+      alert("Status updated!!");
+      location.reload();
     })
     .catch(error => {
       console.log(error);
     });
-  location.reload();
 });
 
-$('#subac').on('click', function () {
+$('#subac').on('click', function (event) {
+  event.preventDefault();
   const id = 1;
-  const
-    temperature = $('#temprature').val();
+  const temperature = $('#temprature').val();
   const fanSpeed = $('#fanSpeed').val();
   const mode = $('#mode-select').val();
 
@@ -184,18 +190,21 @@ $('#subac').on('click', function () {
     fanSpeed,
     mode
   }
+  console.log(acbody);
   $.post(`${API_URL}/acDevices`, acbody)
     .then(response => {
-      location.href = '/air-conditioning';
-      console.log(done);
+      console.log("done");
+      alert("Status updated!!");
+      location.reload();
     })
     .catch(error => {
       console.log(error);
     });
-  location.reload();
+  // location.reload();
 })
 
-$('#subsec').on('click', () => {
+$('#subsec').on('click', (event) => {
+  event.preventDefault();
   var id = 1;
   var door1 = $('#door1').val();
   var door2 = $('#door2').val();
@@ -210,13 +219,14 @@ $('#subsec').on('click', () => {
 
   $.post(`${API_URL}/securityDevices`, sec)
     .then(response => {
-      location.href = '/security';
-      console.log(done);
+      // location.href = '/security';
+      console.log("done");
+      alert("Status updated!!");
+      location.reload();
     })
     .catch(error => {
       console.log(error);
     });
-  location.reload();
 });
 
 function addDeviceToTable(device) {
